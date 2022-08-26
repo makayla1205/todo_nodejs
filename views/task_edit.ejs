@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <script src="https://kit.fontawesome.com/f50f474cf2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <style>
+        body{
+            background: indianred;
+            font-size: 1em;
+            font-family: "Helvetica Neue";
+            margin: 30px;
+        }
+        form {
+
+        }
+
+        form input{
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+            margin: 0px;
+            font-size: 1em;
+            padding: 5px;
+        }
+
+        form button {
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px 8px;
+            font-size: 1em;
+            background: palegreen;
+        }
+
+        .container p a:link {
+            text-decoration: none;
+        }
+        .container p a:visited {
+            text-decoration: none;
+        }
+
+        .container p a:hover {
+            text-decoration: none;
+        }
+
+        .container p a:active {
+            text-decoration: none;
+        }
+
+        .container p a {
+            color: inherit;
+        }
+
+        .container h2 {
+            text-align: center;
+        }
+
+        .container {
+            margin: 10px 50px;
+            background: rgba(255, 255, 255, .1);
+            padding: 20px;
+            margin: 0 auto;
+            width: 600px;
+            border-radius: 10px;
+        }
+
+        .item-container{
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .item li{
+            border-radius: 5px;
+            border: none;
+            background: whitesmoke;
+            margin: 5px 0px;
+            padding: 10px;
+        }
+
+        .item a {
+            color: inherit;
+        }
+
+        .controls{
+            float: right;
+        }
+
+        .controls a {
+            margin: 0px 5px;
+            color: inherit;
+        }
+
+        .item a:link { text-decoration: none;
+        }
+
+
+        .item a:visited { text-decoration: none;
+        }
+
+
+        .item a:hover { text-decoration: none;
+        }
+
+
+        .item a:active { text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p><a href="/list/<%= todoList%>"><i class="fa-solid fa-angles-left"></i> Back To <%= todoList%></a></p>
+    <h2>Edit Task</h2>
+    <form method="post">
+        <input type="text" name="title" value="<%= todoTask%>" required>
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+</body>
+</html>
